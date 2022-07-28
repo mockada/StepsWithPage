@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		872E88B72893306F0027EE92 /* ProgressBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872E88B62893306F0027EE92 /* ProgressBarPresenter.swift */; };
 		87390E522892C1670080E8AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87390E512892C1670080E8AF /* AppDelegate.swift */; };
 		87390E542892C1670080E8AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87390E532892C1670080E8AF /* SceneDelegate.swift */; };
 		87390E592892C1670080E8AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87390E572892C1670080E8AF /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		872E88B62893306F0027EE92 /* ProgressBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarPresenter.swift; sourceTree = "<group>"; };
 		87390E4E2892C1670080E8AF /* StepsWithPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepsWithPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87390E512892C1670080E8AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87390E532892C1670080E8AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				87390E92289311680080E8AF /* StepPageViewController.swift */,
 				87390E962893117D0080E8AF /* StepPagePresenter.swift */,
 				87390E98289311890080E8AF /* StepPageFactory.swift */,
+				872E88B62893306F0027EE92 /* ProgressBarPresenter.swift */,
 			);
 			path = StepPage;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				87390E522892C1670080E8AF /* AppDelegate.swift in Sources */,
 				87390E542892C1670080E8AF /* SceneDelegate.swift in Sources */,
 				87390E93289311680080E8AF /* StepPageViewController.swift in Sources */,
+				872E88B72893306F0027EE92 /* ProgressBarPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,24 +7,17 @@ protocol StepPagePresenterProtocol {
 final class StepPagePresenter {
     weak var viewController: StepPageDisplayProtocol?
     
-    // Para construção da barra de progresso
-    private var stepViewControllerList = [UIViewController]()
-}
-
-private extension StepPagePresenter {
-    func append(viewController: UIViewController) {
-        stepViewControllerList.append(viewController)
-    }
+    private let progressBarPresenter: ProgressBarPresenterProtocol
     
-    func removeLast() {
-        stepViewControllerList.removeLast()
+    init(progressBarPresenter: ProgressBarPresenterProtocol = ProgressBarPresenter()) {
+        self.progressBarPresenter = progressBarPresenter
     }
 }
 
 extension StepPagePresenter: StepPagePresenterProtocol {
     func presentFirstStep() {
         let nextViewController = FirstStepFactory.make(buttonDelegate: self)
-        append(viewController: nextViewController)
+        progressBarPresenter.append(viewController: nextViewController)
         viewController?.display(step: nextViewController, direction: .forward)
     }
 }
@@ -36,15 +29,15 @@ extension StepPagePresenter: FirstStepButtonDelegate {
     
     func showForwardSecondStep() {
         let nextViewController = SecondStepFactory.make(buttonDelegate: self)
-        append(viewController: nextViewController)
+        progressBarPresenter.append(viewController: nextViewController)
         viewController?.display(step: nextViewController, direction: .forward)
     }
 }
 
 extension StepPagePresenter: SecondStepButtonDelegate {
     func showPreviousFirstStep() {
-        removeLast()
-        guard let previousViewController = stepViewControllerList.last else { return }
+        progressBarPresenter.removeLast()
+        guard let previousViewController = progressBarPresenter.currentViewController else { return }
         viewController?.display(step: previousViewController, direction: .reverse)
     }
     
